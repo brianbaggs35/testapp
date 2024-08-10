@@ -151,6 +151,9 @@ GEM
     passenger (6.0.22)
       rack
       rake (>= 0.8.1)
+    pg (1.5.7)
+    postgresql (1.0.0)
+      pg
     psych (5.1.2)
       stringio
     public_suffix (5.0.5)
@@ -264,6 +267,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   passenger (>= 5.0.25)
+  postgresql
   puma (>= 5.0)
   rails (~> 7.2, >= 7.2)
   selenium-webdriver
