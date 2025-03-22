@@ -24,7 +24,7 @@ jobs:
           POSTGRES_PASSWORD: password
     env:
       RAILS_ENV: development
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_development"
+      DATABASE_URL: "postgres://rails:password@localhost:5432/development"
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
