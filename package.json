@@ -1,0 +1,21 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "This is a test app created for my ruby on rails course. I will add more as I advance through the course.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.2"
+  },
+  "dependencies": {
+    "playwright": "^1.51.1"
+  }
+}
