@@ -48,3 +48,9 @@ jobs:
         with:
           bundler-cache: true
           ruby-version: 3.4.2
+      - name: Install modules
+        run: npm install eslint
+      - name: Fund NPM packages
+        run: npm fund
+      - name: Run ESLint
+        run: npx eslint . --ignore-pattern 'vendor/*'
