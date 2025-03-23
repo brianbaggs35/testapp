@@ -23,6 +23,18 @@ jobs:
     strategy:
       matrix:
         ruby-version: ['3.4', '3.4.2']
+    services:
+      postgres:
+        image: postgres:13
+        ports:
+          - "5432:5432"
+        env:
+          POSTGRES_DB: development
+          POSTGRES_USER: rails
+          POSTGRES_PASSWORD: password
+    env:
+      RAILS_ENV: development
+      DATABASE_URL: "postgres://rails:password@localhost:5432/development"
 
     steps:
     - uses: actions/checkout@v4
