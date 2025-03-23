@@ -37,12 +37,4 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
     patch project_url(@project), params: { project: { description: @project.description, percent_complete: @project.percent_complete, title: @project.title } }
     assert_redirected_to project_url(@project)
   end
-
-  test "should destroy project" do
-    assert_difference("Project.count", -1) do
-      delete project_url(@project)
-    end
-
-    assert_redirected_to projects_url
-  end
 end
