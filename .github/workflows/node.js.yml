@@ -26,7 +26,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ci
-    - run: npm fund
-    - run: npm run build --if-present
-    - run: npm run lint
+    - name: Install dependencies
+      run: npm ci
+    - name: Check funding information
+      run: npm fund
+    - name: Build the project (if applicable)
+      run: npm run build --if-present
+    - name: Run lint checks
+      run: npm run lint
